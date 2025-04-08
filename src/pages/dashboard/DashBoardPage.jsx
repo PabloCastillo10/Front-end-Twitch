@@ -1,9 +1,20 @@
 import React from "react";
+import videoBc from "../../assets/video5.mp4"
+import { Navbar } from "../../components/navbars/Navbar";
+import './dashBoardPage.css'
 
 export const DashBoardPage = () => {
     return (
-        <div>
-            DashBoardPage
+        
+        <div className="app-container" >
+             <Navbar/>
+            <video autoPlay loop muted playsInline className="background-video">
+                <source src={videoBc} type="video/mp4"/>
+            </video>
+
+
+        
+            
         </div>
     )
 }
