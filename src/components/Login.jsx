@@ -68,27 +68,27 @@ import { emailValidationMessage,
  
     return(
         <div className="login-container">
-            <Logo text={'Logo Nba Cast'}/>
+            <Logo text={'Nba Cast'}/>
             <form className="auth-form">
-                <input
+                <Input
                     field='email'
-                    label='email'
+                    label='Email'
                     value={formState.email.value}
                     onChangeHandler={handleInputValueChange}
-                    type="text"
+                    type= 'email'
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.email.showError}
                     validationMessage={emailValidationMessage}
                 />
-                <input
+                <Input
                     field='password'
-                    label='password'
+                    label='Password'
                     value={formState.password.value}
                     onChangeHandler={handleInputValueChange}
                     type="password"
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.password.showError}
-                    validationMessage={passwordValidationMessage}
+                    validationMessage={validatePasswordMessage}
                 />
                 <button onClick={handleLogin} disabled={isSubmitButtonDisable}>
                     Log in
