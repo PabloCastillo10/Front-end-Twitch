@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import logo from '../../assets/nba.webp'
 import { useUserDetails } from "../../shared/hooks/useUserDetails";
+import './navbar.css'
 
 
 
@@ -9,8 +10,7 @@ const NavLogo = () => {
         <div className="nav-logo-container">
             <img
                 className="nav-logo"
-                width='100%'
-                height='100%'
+                
                 src={logo}
                 alt="Escudo Kinal"
             />
@@ -53,7 +53,7 @@ export const Navbar = () => {
             <div className="nav-container">
                 <NavLogo />
                 <div className="nav-buttons-container">
-                    <NavButton text="Browse" onClickHandler={handleNavigateChannelpage}/>
+                    <NavButton text="Browse" onClickHandler={handleNavigateChannelpage} />
                     {!isLogged ? (
                         <NavButton text="Login" onClickHandler={handleNavigateToAuthPage}/>
                 ) : (

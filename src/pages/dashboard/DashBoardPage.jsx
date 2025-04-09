@@ -4,17 +4,22 @@ import { Navbar } from "../../components/navbars/Navbar";
 import './dashBoardPage.css'
 
 export const DashBoardPage = () => {
-    return (
-        
+    return ( 
         <div className="app-container" >
-             <Navbar/>
             <video autoPlay loop muted playsInline className="background-video">
                 <source src={videoBc} type="video/mp4"/>
-            </video>
+            </video> 
+
+            <div className="app-content">
+                <Navbar/>
+                <div className="app-content-container">
+                   
+                </div>
+                </div>
+        </div>
 
 
         
-            
-        </div>
+        
     )
 }
