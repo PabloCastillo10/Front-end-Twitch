@@ -1,4 +1,4 @@
-const imageUrl = '',
+const imageUrl = '';
 
 const ChannelAvatar = ({url}) => {
     return (
@@ -32,4 +32,5 @@ export const ChannelCard = ({
             </span>
         </div>
     )
+
 }
