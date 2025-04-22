@@ -44,8 +44,4 @@ export const useChannels = () => {
         allChannels: channels?.channels,
         followedChannels: channels?.followedChannels
     }
-
-    
-
-
 }

@@ -14,10 +14,10 @@ export const DashBoardPage = () => {
     const {getChannels, allChannels, isFetching, followedChannels} = useChannels()
     const {isLogged} = useUserDetails()
 
-    useEffect(() =>{
+    useEffect(() => {
         getChannels(isLogged)
-    }, [])
-
+      }, []);
+    
     if(isFetching) {
         return <LoadingSpinner/>
     }
@@ -29,6 +29,7 @@ export const DashBoardPage = () => {
                 <Navbar/>
                 <Content channels= {allChannels} getChannels= {getChannels}/>
                 <Sidebar channels={followedChannels}/>
+                
 
      
         </div>
