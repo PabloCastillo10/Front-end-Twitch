@@ -3,14 +3,18 @@ import { changePassword as changePasswordRequest } from "../../services"
 
 
 export const useChangePassword = () => {
-    const changePassword = async (password, newPaswword) => {
-        const responseData = await changePasswordRequest({ password, newPaswword })
+
+    const changePassword = async (password, newPassword) => {
+        const responseData = await changePasswordRequest({ password, newPassword });
         if (responseData.error) {
-            toast.error("No fue Posible cambiar la contraseña")
-            return
+            return toast.error(
+                responseData.e?.response?.data || 'No fue posible actualizar el password'
+            );
         }
-        toast.success("Contraseña cambiada con exito")
+        toast.success('Password actualizada correctamente')
     }
 
-    return { changePassword }
+    return {
+        changePassword
+    }
 }

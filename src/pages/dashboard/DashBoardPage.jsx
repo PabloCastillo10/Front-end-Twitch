@@ -9,33 +9,24 @@ import { Sidebar } from "../../components/navbars/Sidebar.jsx";
 import {useChannels} from "../../shared/hooks/useChannels.jsx"
 import { useUserDetails } from "../../shared/hooks/useUserDetails";
 
-export const DashBoardPage = () => {
+export const DashboardPage = () => {
 
-    const {getChannels, allChannels, isFetching, followedChannels} = useChannels()
-    const {isLogged} = useUserDetails()
-
+    const { getChannels, allChannels, isFetching, followedChannels } = useChannels()
+    const { isLogged } = useUserDetails()
+  
     useEffect(() => {
-        getChannels(isLogged)
-      }, []);
-    
+      getChannels(isLogged)
+    }, []);
+  
     if(isFetching) {
-        return <LoadingSpinner/>
+      return <LoadingSpinner />
     }
-    return ( 
-        <div className="dashboard-container" >
-            <video autoPlay loop muted playsInline className="background-video">
-                <source src={videoBc} type="video/mp4"/>
-            </video> 
-                <Navbar/>
-                <Content channels= {allChannels} getChannels= {getChannels}/>
-                <Sidebar channels={followedChannels}/>
-                
-
-     
-        </div>
-
-
-        
-        
+  
+    return (
+      <div className="dashboard-container">
+          <Navbar />
+          <Content channels={allChannels} getChannels={getChannels}/>
+          <Sidebar channels={followedChannels}/>
+      </div>
     )
-}
+  }

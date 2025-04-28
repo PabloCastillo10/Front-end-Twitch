@@ -1,4 +1,4 @@
-export const validationAvatarURL = (url) => {
+export const validationAvatarUrl = (url) => {
     const regex = /^(ftp|http|https):\/\/[^ "]+$/;
     return regex.test(url);
 }

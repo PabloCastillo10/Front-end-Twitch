@@ -7,7 +7,7 @@ const ChannelAvatar = ({url}) => {
         </div>
     )
 }
-
+    
 
 export const ChannelCard = ({
     title,

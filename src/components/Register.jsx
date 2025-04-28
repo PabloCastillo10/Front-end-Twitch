@@ -9,7 +9,7 @@ import {
          emailValidationMessage,
          validatePasswordMessage,
          passwordConfirmationMessage,
-         validateUserName
+         validateUsername
  } from "../shared/validators";
 
  import { useRegister } from "../shared/hooks";
@@ -59,7 +59,7 @@ import {
                 isValid = validateEmail(value)
                 break;
             case 'username':
-                isValid = validateUserName(value)
+                isValid = validateUsername(value)
                 break
             case 'password' :
                 isValid = validatePassword(value)

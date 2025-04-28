@@ -1,16 +1,15 @@
 import { useState } from "react";
-
 import {
-    validateUserName,
+    validateUsername,
     validateUsernameMessage,
-    validationAvatarURL,
+    validationAvatarUrl,
     avatarUrlValidationMessage,
     validateDescription,
     descriptionValidateMessage,
-    validaTtitle,
-    validaTtileMessage
-} from "../../shared/validators"
-import { Input } from "../Input";
+    validateTitle,
+    validateTitleMessage
+} from '../../shared/validators'
+import { Input } from '../Input'
 
 const inputs = [
     {
@@ -22,7 +21,7 @@ const inputs = [
     {
         field: 'title',
         label: 'Title',
-        validationMessage: validaTtileMessage,
+        validationMessage: validateTitleMessage,
         type: 'text'
     },
     {
@@ -42,22 +41,22 @@ const inputs = [
 export const ChannelSettings = ({ settings, saveSettings }) => {
     const [formState, setFormState] = useState({
         username: {
-            isValid: validateUserName(settings.username),
+            isValid: validateUsername(settings.username),
             showError: false,
             value: settings.username
         },
         title: {
-            isValid: validaTtitle(settings.title || ""),
+            isValid: validateTitle(settings.title || ''),
             showError: false,
             value: settings.title
         },
         avatarUrl: {
-            isValid: validationAvatarURL(settings.avatarUrl),
+            isValid: validationAvatarUrl(settings.avatarUrl),
             showError: false,
             value: settings.avatarUrl
         },
         description: {
-            isValid: validateDescription(settings.description || ""),
+            isValid: validateDescription(settings.description || ''),
             showError: false,
             value: settings.description
         }
@@ -79,13 +78,13 @@ export const ChannelSettings = ({ settings, saveSettings }) => {
 
         switch(field) {
             case 'username':
-                isValid = validateUserName(value)
+                isValid = validateUsername(value)
                 break;
             case 'title':
-                isValid = validaTtitle(value)
+                isValid = validateTitle(value)
                 break;
             case 'avatarUrl':
-                isValid = validationAvatarURL(value)
+                isValid = validationAvatarUrl(value)
                 break;
             case 'description':
                 isValid = validateDescription(value)
@@ -141,6 +140,3 @@ export const ChannelSettings = ({ settings, saveSettings }) => {
         </form>
     )
 }
-
-
-
