@@ -160,8 +160,8 @@
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 10px;
-    box-shadow: 0 0 5px 0 lightgrey;
-    background-color: #2f2f30;
+    box-shadow: 0 0 5px 0 rgb(255, 255, 255);
+    background-color: #000000;
     width: 400px;
     padding: 10px;
     font-size: 16px;
@@ -172,7 +172,7 @@
     margin-bottom: 10px;
     padding: 10px;
     font-size: 18px;
-    background-color: #0b336b;
+    background-color: #006aff;
     color: white;
     border: none;
     cursor: pointer;
@@ -193,8 +193,8 @@
     flex-direction: column;
     margin-top: 20px;
     margin-right: 20px;
-    box-shadow: 0 0 5px 0 lightgrey;
-    background-color: #2f2f30;
+    box-shadow: 0 0 5px 0 rgb(255, 255, 255);
+    background-color: #000000;
     padding: 10px;
 }
  
@@ -225,7 +225,7 @@
     height: 20%;
     padding: 20px;
     margin: 5px;
-    background: #2f2f30;
+    background: #ffffff;
 }
  
 .channel-description-title {
@@ -250,7 +250,7 @@
  
 .chat-section {
     width: 20%;
-    background: #2f2f30;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     height: 100%;

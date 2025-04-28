@@ -25,7 +25,7 @@ export const useChangeSettings = () => {
         })
     }
 
-    const saveChannelSettings = async (data) => {
+    const saveSettings = async (data) => {
         const response = await updateChannelSettings(data)
 
         if(response.error) {
@@ -43,7 +43,7 @@ export const useChangeSettings = () => {
     return {
         isFetching: !channelSettings,
         channelSettings,
-        saveChannelSettings,
+        saveSettings,
     }
 
 
